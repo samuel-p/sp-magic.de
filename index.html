@@ -16,7 +16,10 @@
     <script src="bower_components/flip/dist/jquery.flip.min.js"></script>
     <script>
         $(document).ready(function () {
-            $('#card').flip({
+            var card = $('#card');
+            card.css('cursor', 'pointer');
+            card.find('.back').removeClass('hide');
+            card.flip({
                 trigger: 'click',
                 speed: 500,
                 reverse: true
@@ -62,7 +65,6 @@
         #card {
             display: inline-block;
             margin: 1rem;
-            cursor: pointer;
         }
     </style>
 
@@ -94,7 +96,7 @@
         <img class="logo hide-for-small-only" src="img/samuel.png">
         <img class="logo small show-for-small-only" src="img/samuel.png">
     </div>
-    <div class="back">
+    <div class="back hide">
         <img class="logo hide-for-small-only" src="img/samuel.png">
         <img class="logo small show-for-small-only" src="img/samuel.png">
     </div>
