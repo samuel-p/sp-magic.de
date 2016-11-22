@@ -13,10 +13,56 @@
 
     <script src="bower_components/jquery/dist/jquery.min.js"></script>
     <script src="bower_components/foundation-sites/dist/foundation.min.js"></script>
+    <script src="bower_components/flip/dist/jquery.flip.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('#card').flip({
+                trigger: 'click',
+                speed: 500,
+                reverse: true
+            });
+        });
+    </script>
 
     <style>
-        h1, h2 {
-            margin: 2rem 0;
+        body {
+            padding: 2%;
+            background: url('img/bg.png') no-repeat center center fixed;
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            -o-background-size: cover;
+            background-size: cover;
+        }
+
+        hr {
+            border-bottom: 1px solid #0a0a0a;
+        }
+
+        .logo {
+            max-width: 256px;
+            max-height: 256px;
+            background-color: #ffffff;
+            border-radius: 50%;
+            border: 1px solid #222222;
+        }
+
+        .logo.small {
+            max-width: 128px;
+            max-height: 128px;
+        }
+
+        .menu a {
+            color: #0a0a0a;
+        }
+
+        .menu a:hover {
+            color: #1a1a1a;
+        }
+
+        #card {
+            display: inline-block;
+            margin: 1rem;
+            cursor: pointer;
         }
     </style>
 
@@ -42,16 +88,51 @@
     <!-- End Piwik Code -->
 </head>
 
-<body>
+<body class="text-center">
+<div id="card">
+    <div class="front">
+        <img class="logo hide-for-small-only" src="img/samuel.png">
+        <img class="logo small show-for-small-only" src="img/samuel.png">
+    </div>
+    <div class="back">
+        <img class="logo hide-for-small-only" src="img/samuel.png">
+        <img class="logo small show-for-small-only" src="img/samuel.png">
+    </div>
+</div>
 
-<h1 class="text-center">sp-magic.de</h1>
+<hr/>
 
-<p class="text-center">
-    <img src="img/samuel.png" alt="samuel">
-</p>
+<div class="row columns">
+    <div class="medium-8 medium-centered">
+        <h2>Herzlich willkommen bei sp-magic!</h2>
+        <p>Mein Name ist Samuel Philipp und ich bin ein Zauberkünstler aus Karlsruhe. Ich präsentiere Kartentricks,
+            Tricks mit Büchern, Zeitung und vielen anderen Dingen. Nehmen Sie gerne Kontakt mit mir
+            auf.</p>
+    </div>
+</div>
 
-<h2 class="text-center">coming soon!</h2>
+<hr/>
+
+<div class="menu-centered hide-for-small-only">
+    <ul class="menu">
+        <li><a href="https://plus.google.com/u/0/+SamuelPd"><span
+                class="fa fa-4x fa-google-plus-official"></span></a></li>
+        <li><a href="mailto:mail@sp-magic.de"><span
+                class="fa fa-4x fa-envelope"></span></a></li>
+    </ul>
+</div>
+<div class="menu-centered show-for-small-only">
+    <ul class="menu">
+        <li><a href="https://plus.google.com/u/0/+SamuelPd"><span
+                class="fa fa-2x fa-google-plus-official"></span></a></li>
+        <li><a href="mailto:mail@sp-magic.de"><span
+                class="fa fa-2x fa-envelope"></span></a></li>
+    </ul>
+</div>
+
+<script>
+    $(document).foundation();
+</script>
 
 </body>
 </html>
-
