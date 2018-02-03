@@ -28,6 +28,11 @@
     </script>
 
     <style>
+        @font-face {
+            font-family: 'Minotaur';
+            src: local('Minotaur Phatte'), url(font/minotaur.ttf) format('truetype');
+        }
+
         body {
             padding: 2%;
             background: url('img/bg.png') no-repeat center center fixed;
@@ -36,6 +41,7 @@
             -o-background-size: cover;
             background-size: cover;
             -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+            font-size: 20px;
         }
 
         hr {
@@ -67,6 +73,11 @@
             display: inline-block;
             margin: 1rem;
         }
+
+        .sp-magic {
+            font-family: "Minotaur", monospace;
+            font-size: 5rem;
+        }
     </style>
 
     <!-- Matomo -->
@@ -75,15 +86,19 @@
         /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
         _paq.push(['trackPageView']);
         _paq.push(['enableLinkTracking']);
-        (function() {
-            var u="//matomo.sp-codes.de/";
-            _paq.push(['setTrackerUrl', u+'piwik.php']);
+        (function () {
+            var u = "//matomo.sp-codes.de/";
+            _paq.push(['setTrackerUrl', u + 'piwik.php']);
             _paq.push(['setSiteId', '3']);
-            var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
-            g.type='text/javascript'; g.async=true; g.defer=true; g.src=u+'piwik.js'; s.parentNode.insertBefore(g,s);
+            var d = document, g = d.createElement('script'), s = d.getElementsByTagName('script')[0];
+            g.type = 'text/javascript';
+            g.async = true;
+            g.defer = true;
+            g.src = u + 'piwik.js';
+            s.parentNode.insertBefore(g, s);
         })();
     </script>
-    <noscript><p><img src="//matomo.sp-codes.de/piwik.php?idsite=3&rec=1" style="border:0;" alt="" /></p></noscript>
+    <noscript><p><img src="//matomo.sp-codes.de/piwik.php?idsite=3&rec=1" style="border:0;" alt=""/></p></noscript>
     <!-- End Matomo Code -->
 </head>
 
@@ -103,10 +118,9 @@
 
 <div class="row columns">
     <div class="medium-8 medium-centered">
-        <h2>Herzlich willkommen bei sp-magic!</h2>
-        <p>Mein Name ist Samuel Philipp und ich bin ein Zauberkünstler aus Karlsruhe. Ich präsentiere Kartentricks,
-            Tricks mit Büchern, Zeitung und vielen anderen Dingen. Nehmen Sie gerne Kontakt mit mir
-            auf.</p>
+        <h1 class="sp-magic">SP-MAGIC</h1>
+        <p>Hi, my name is Samuel Philipp and I am a German magician from Magdeburg. In my shows I do tricks with playing
+            cards, books, newspaper and many other things. Feel free to contact me.</p>
     </div>
 </div>
 
