@@ -1,9 +1,0 @@
-{
-  "name": "sp-magic",
-  "dependencies": {
-    "foundation-sites": "*",
-    "jquery": "*",
-    "components-font-awesome": "*",
-    "flip": "*"
-  }
-}
