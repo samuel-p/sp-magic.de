@@ -9,11 +9,6 @@
 @import "~@fortawesome/fontawesome-free/scss/brands";
 @import "~@fortawesome/fontawesome-free/scss/regular";
 
-@font-face {
-  font-family: 'Minotaur';
-  src: local('Minotaur Phatte'), url(../font/minotaur.ttf) format('truetype');
-}
-
 body {
   background: url('../img/bg.png') no-repeat center center fixed;
   -webkit-background-size: cover;
@@ -57,8 +52,6 @@ a:hover {
 }
 
 .sp-codes {
-  font-family: "Minotaur", monospace;
-  font-size: 5rem;
   text-align: center;
 }
 
